@@ -62,11 +62,11 @@ namespace DataAccess.Concrete.InMemory
             // gönderdiğim ürün ID sine sahip olan listedeki ürünü bul
             Product productToUpdate = _products.SingleOrDefault(p => p.ProductId == product.ProductId);
             
-            productToUpdate = product.ProductName;
-            productToUpdate = product.CategoryId;
-            productToUpdate = product.UnitPrice;
-            productToUpdate = product.UnitsInStock;
-            productToUpdate = product.ProductId;
+            productToUpdate.ProductName = product.ProductName;
+            productToUpdate.CategoryId = product.CategoryId;
+            productToUpdate.UnitPrice = product.UnitPrice;
+            productToUpdate .UnitsInStock= product.UnitsInStock;
+            productToUpdate.ProductId = product.ProductId;
 
         }
     }
